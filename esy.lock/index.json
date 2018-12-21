@@ -1,0 +1,39 @@
+{
+  "checksum": "fd57738917aac39acf16acee3b4cd263",
+  "root": "esy-perl@link:./package.json",
+  "node": {
+    "perl@archive:https://www.cpan.org/src/5.0/perl-5.28.1.tar.gz#sha1:6f1ad40f1a40b5f33814b7afff315e813622590b@3af45794": {
+      "id":
+        "perl@archive:https://www.cpan.org/src/5.0/perl-5.28.1.tar.gz#sha1:6f1ad40f1a40b5f33814b7afff315e813622590b@3af45794",
+      "name": "perl",
+      "version":
+        "archive:https://www.cpan.org/src/5.0/perl-5.28.1.tar.gz#sha1:6f1ad40f1a40b5f33814b7afff315e813622590b",
+      "source": {
+        "type": "install",
+        "source": [
+          "archive:https://www.cpan.org/src/5.0/perl-5.28.1.tar.gz#sha1:6f1ad40f1a40b5f33814b7afff315e813622590b"
+        ]
+      },
+      "overrides": [
+        {
+          "buildsInSource": true,
+          "build": [ "./Configure -des -Dprefix=#{self.install}", "make" ],
+          "install": [ "make install" ]
+        }
+      ],
+      "dependencies": [],
+      "devDependencies": []
+    },
+    "esy-perl@link:./package.json": {
+      "id": "esy-perl@link:./package.json",
+      "name": "esy-perl",
+      "version": "link:./package.json",
+      "source": { "type": "link", "path": ".", "manifest": "package.json" },
+      "overrides": [],
+      "dependencies": [
+        "perl@archive:https://www.cpan.org/src/5.0/perl-5.28.1.tar.gz#sha1:6f1ad40f1a40b5f33814b7afff315e813622590b@3af45794"
+      ],
+      "devDependencies": []
+    }
+  }
+}
