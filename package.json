@@ -1,6 +1,6 @@
 {
   "name": "esy-perl",
-  "version": "0.1.0",
+  "version": "5.28.1000",
   "description": "Perl 5 packaged for esy",
   "license": "MIT",
   "esy": {
