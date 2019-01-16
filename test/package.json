@@ -1,0 +1,27 @@
+{
+  "name": "test-esy-perl",
+  "version": "0.0.0",
+  "description": "Perl 5 packaged for esy",
+  "license": "MIT",
+  "scripts": {
+    "example": "perl hello.pl"
+  },
+  "dependencies": {
+    "perl": "*"
+  },
+  "resolutions": {
+    "perl": {
+      "source": "https://www.cpan.org/src/5.0/perl-5.28.1.tar.gz#6f1ad40f1a40b5f33814b7afff315e813622590b",
+      "override": {
+        "buildsInSource": true,
+        "build": [
+          "./Configure -des -Dprefix=#{self.install}",
+          "make"
+        ],
+        "install": [
+          "make install"
+        ]
+      }
+    }
+  }
+}
